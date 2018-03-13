@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+<title>ACMNA233</title>
+
+<!-- Preamble -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+<!-- End preamble -->
+
+<head>
+<p> I'm hosted with github pages</p>
+<!-- MathJax Initialisation-->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    showProcessingMessages: false,
+    tex2jax: { inlineMath: [['$','$'],['\\(','\\)']] }
+  });
+</script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<!-- End MathJax Initialisation-->
+ 
+ <!-- Style sheet import -->
+ <link rel="stylesheet" href="moduleTemplate2.css">
+
+</head>
+
+<body>
+
+
+
+<!-- 
+<div class="header-container Header">
+	<div class="ml5 FR ">
+		<script>document.write(theModuleTitle)</script>
+	</div>
+	<div class="mr5">
+		ACMMG271
+	</div>
+</div>
+ -->
+
+<!-- Begin title of module and logo -->
+<div class="title-container mt3 mb2">
+	<div class="ml5 F0 title-font">
+	<!-- Write the title here -->
+		Factorising Quadratics
+	</div>
+	<div class="mr5">
+		<img src="MPLOGO.png" class="alignrightlogo" alt="MPLOGO" width="150" height="80">
+	</div>
+</div>
+<!-- End title of module and logo -->
+
+<!-- initial white board prompt -->
+<div class="ml5 fs2 mb2">
+	Watch the video below
+</div>
+<!-- End initial white board prompt -->
+
+<iframe class = "imgWhiteBoard" width="568" height="320" src="https://www.youtube.com/embed/M-yAgyrzGdo" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<!-- Words to remember prompt and vocabulary -->
+<section class="mt1 mb1">
+	<div class="ml5 fs2 mb2">
+		Words to remember
+	</div>
+	<div class="words-to-remember-container">
+		<!-- Glossary term and definition -->
+		<div class="words-to-remember-sub-container">
+			<div class="ml5 words-to-remember-width">
+				Factorise
+			</div>
+			<div class="ml5 words-definition-width">
+				To put brackets where there were not brackets before
+			</div>
+		</div>
+		<!-- End glossary term and definition -->
+				<!-- Glossary term and definition -->
+		<div class="words-to-remember-sub-container">
+			<div class="ml5 words-to-remember-width">
+				Expand
+			</div>
+			<div class="ml5 words-definition-width">
+			To rid of brackets that were there before
+			</div>
+		</div>
+		<!-- End glossary term and definition -->
+	</div>
+</section>
+<!-- End words to remember prompt and vocabulary -->
+
+<!-- initial white board prompt -->
+<div class="ml5 fs2 mb2">
+	Click the white board below
+</div>
+<!-- End initial white board prompt -->
+
+<!--Begin Whiteboard-->
+<img class = "imgWhiteBoard" src="https://imgur.com/6pgcahu.png" id="imgClickAndChange" onclick="changeImage()" usemap="#SUB15" />
+<!-- End Whiteboard-->
+
+<!-- Initial questions prompt -->
+<div class="ml5 fs3 mb3 mt3">
+	Questions
+</div>
+<!-- End initial questions prompt -->
+
+<!--Question number and text -->
+<div class="question-container ml5 mr5 mb3">
+	<div class="question-number">
+		1)
+	</div>
+	<div class="question-text">
+	Factorise the expressions below by finding a pair of numbers that multiply to the last term and add to the middle term. The first one has been done for you. Click the question letters to see answers.
+	</div>
+</div>
+<!-- End question number and text -->
+
+
+<!--Question parts begin here the large question part container is the parent and each item is called question part container -->
+<div class="large-question-part-container ml6 mr5">
+	<!--Question part letter and text -->
+	<div class="question-part-container mb4 minw5">
+		<!-- container for question lettering -->
+		<div class="question-part-letter">
+			a)
+		</div>
+		<!-- end container for question lettering -->
+		<!-- container for question and answer -->
+		<div>
+			<!-- question text-->
+			<div class="question-part-text ml4" id="Q1a">
+			</div>
+			<!-- end question text -->
+			
+			<!-- answer text -->
+			<div class="question-part-text ml3" id="Q1aA">
+			</div>
+			<!-- end answer text -->
+		</div>
+		<!-- end container for question and answer -->
+	</div>
+	<!-- End part letter and text -->
+	
+	<!--Question part letter and text -->
+	<div class="question-part-container mb4 minw5">
+		<div class="question-part-letter" onclick="showAnswer(Q1bA)">
+			b)
+		</div>
+		<!-- container for question and answer -->
+		<div>
+			<!-- question text-->
+			<div class="question-part-text ml4" id="Q1b">
+			</div>
+			<!-- end question text -->
+			<!-- answer text -->
+			<div class="question-part-text-answer ml3 answer" id="Q1bA">
+			</div>
+			<!-- end answer text -->
+		</div>
+		<!-- end container for question and answer -->
+	</div>
+	<!-- End part letter and text -->
+	
+		<!--Question part letter and text -->
+	<div class="question-part-container mb4 minw5">
+		<div class="question-part-letter" onclick="showAnswer(Q1cA)">
+			c)
+		</div>
+		<!-- container for question and answer -->
+		<div>
+			<!-- question text-->
+			<div class="question-part-text ml4" id="Q1c">
+			</div>
+			<!-- end question text -->
+			<!-- answer text -->
+			<div class="question-part-text-answer ml3 answer" id="Q1cA">
+			</div>
+			<!-- end answer text -->
+		</div>
+		<!-- end container for question and answer -->
+	</div>
+	<!-- End part letter and text -->
+
+			<!--Question part letter and text -->
+	<div class="question-part-container mb4 minw5">
+		<div class="question-part-letter" onclick="showAnswer(Q1dA)">
+			d)
+		</div>
+		<!-- container for question and answer -->
+		<div>
+			<!-- question text-->
+			<div class="question-part-text ml4" id="Q1d">
+			</div>
+			<!-- end question text -->
+			<!-- answer text -->
+			<div class="question-part-text-answer ml3 answer" id="Q1dA">
+			</div>
+			<!-- end answer text -->
+		</div>
+		<!-- end container for question and answer -->
+	</div>
+	<!-- End part letter and text -->
+	
+<!--Large question part container ends here -->
+	</div>
+<!--Large question part container ends here -->
+
+<!--Question number and text -->
+<div class="question-container ml5 mr5 mb3">
+	<div class="question-number">
+
+	</div>
+	<div class="question-text">
+	<b>Checkpoint:</b> Factorise the quadratic below correctly.
+	</div>
+</div>
+
+<!-- End question number and text -->
+<!--Question parts begin here the large question part container is the parent and each item is called question part container -->
+<div class="large-question-part-container ml6 mr5">
+	<!--Question part letter and text -->
+	<div class="question-part-container mb4 minw6">
+		<div class="question-part-letter">
+
+		</div>
+		<div class="question-part-text ml3">
+		\(x^2+18x+72\)	<div><br>\(\text{Answer:}\) <input type="text" id="AnswerInput"><br><br></div><button onclick="CheckAnswer()">Check Answer</button>
+		<div><br></div>
+		<div id="DisplayAnswerMarkingOne"></div>
+		</div>
+	</div>
+
+	
+	</div>
+<!--Large question part container ends here -->
+
+<!--Hidden Question two -->
+<div   id="HideShow">
+
+<!--Question number and text -->
+<div class="question-container ml5 mr5 mb3">
+	<div class="question-number">
+		2)
+	</div>
+	<div class="question-text">
+	Factorise the expressions below by finding a pair of numbers that multiply to the last term and add to the middle term. The first one has been done for you.
+	</div>
+</div>
+<!-- End question number and text -->
+
+
+<!--Question parts begin here the large question part container is the parent and each item is called question part container -->
+<div class="large-question-part-container ml6 mr5">
+	<!--Question part letter and text -->
+	<div class="question-part-container mb4 minw5">
+		<!-- container for question lettering -->
+		<div class="question-part-letter">
+			a)
+		</div>
+		<!-- end container for question lettering -->
+		<!-- container for question and answer -->
+		<div>
+			<!-- question text-->
+			<div class="question-part-text ml4" id="Q2a">
+			</div>
+			<!-- end question text -->
+			
+			<!-- answer text -->
+			<div class="question-part-text ml3" id="Q2aA">
+			</div>
+			<!-- end answer text -->
+		</div>
+		<!-- end container for question and answer -->
+	</div>
+	<!-- End part letter and text -->
+	
+	<!--Question part letter and text -->
+	<div class="question-part-container mb4 minw5">
+		<div class="question-part-letter" onclick="showAnswer(Q2bA)">
+			b)
+		</div>
+		<!-- container for question and answer -->
+		<div>
+			<!-- question text-->
+			<div class="question-part-text ml4" id="Q2b">
+			</div>
+			<!-- end question text -->
+			<!-- answer text -->
+			<div class="question-part-text-answer ml3 answer" id="Q2bA">
+			</div>
+			<!-- end answer text -->
+		</div>
+		<!-- end container for question and answer -->
+	</div>
+	<!-- End part letter and text -->
+	
+		<!--Question part letter and text -->
+	<div class="question-part-container mb4 minw5">
+		<div class="question-part-letter" onclick="showAnswer(Q2cA)">
+			c)
+		</div>
+		<!-- container for question and answer -->
+		<div>
+			<!-- question text-->
+			<div class="question-part-text ml4" id="Q2c">
+			</div>
+			<!-- end question text -->
+			<!-- answer text -->
+			<div class="question-part-text-answer ml3 answer" id="Q2cA">
+			</div>
+			<!-- end answer text -->
+		</div>
+		<!-- end container for question and answer -->
+	</div>
+	<!-- End part letter and text -->
+
+			<!--Question part letter and text -->
+	<div class="question-part-container mb4 minw5">
+		<div class="question-part-letter" onclick="showAnswer(Q2dA)">
+			d)
+		</div>
+		<!-- container for question and answer -->
+		<div>
+			<!-- question text-->
+			<div class="question-part-text ml4" id="Q2d">
+			</div>
+			<!-- end question text -->
+			<!-- answer text -->
+			<div class="question-part-text-answer ml3 answer" id="Q2dA">
+			</div>
+			<!-- end answer text -->
+		</div>
+		<!-- end container for question and answer -->
+	</div>
+	<!-- End part letter and text -->
+	
+<!--Large question part container ends here -->
+	</div>
+<!--Large question part container ends here -->
+<!--Question number and text -->
+<div class="question-container ml5 mr5 mb3">
+	<div class="question-number">
+
+	</div>
+	<div class="question-text">
+	<b>Checkpoint:</b> Factorise the quadratic below correctly.
+	</div>
+</div>
+
+<!-- End question number and text -->
+<!--Question parts begin here the large question part container is the parent and each item is called question part container -->
+<div class="large-question-part-container ml6 mr5">
+	<!--Question part letter and text -->
+	<div class="question-part-container mb4 minw6">
+		<div class="question-part-letter">
+
+		</div>
+		<div class="question-part-text ml3">
+		\(x^2-18x+72\)	<div><br>\(\text{Answer:}\) <input type="text" id="AnswerInput2"><br><br></div><button onclick="CheckAnswer2()">Check Answer</button>
+		<div><br></div>
+		<div id="DisplayAnswerMarkingTwo"></div>
+		</div>
+	</div>
+
+	
+	</div>
+<!--Large question part container ends here -->
+
+
+</div>
+<!--End Hidden Question two -->
+
+
+
+
+<!--Hidden Question three -->
+<div   id="HideShow2">
+
+<!--Question number and text -->
+<div class="question-container ml5 mr5 mb3">
+	<div class="question-number">
+		3)
+	</div>
+	<div class="question-text">
+	Factorise the expressions below by finding a pair of numbers that multiply to the last term and add to the middle term.
+	</div>
+</div>
+<!-- End question number and text -->
+
+
+<!--Question parts begin here the large question part container is the parent and each item is called question part container -->
+<div class="large-question-part-container ml6 mr5">
+	<!--Question part letter and text -->
+	<div class="question-part-container mb4 minw5">
+		<!-- container for question lettering -->
+		<div class="question-part-letter" onclick="showAnswer(Q3aA)">
+			a)
+		</div>
+		<!-- end container for question lettering -->
+		<!-- container for question and answer -->
+		<div>
+			<!-- question text-->
+			<div class="question-part-text ml4" id="Q3a">
+			</div>
+			<!-- end question text -->
+			
+			<!-- answer text -->
+			<div class="question-part-text-answer ml3 answer" id="Q3aA">
+			</div>
+			<!-- end answer text -->
+		</div>
+		<!-- end container for question and answer -->
+	</div>
+	<!-- End part letter and text -->
+	
+	<!--Question part letter and text -->
+	<div class="question-part-container mb4 minw5">
+		<div class="question-part-letter" onclick="showAnswer(Q3bA)">
+			b)
+		</div>
+		<!-- container for question and answer -->
+		<div>
+			<!-- question text-->
+			<div class="question-part-text ml4" id="Q3b">
+			</div>
+			<!-- end question text -->
+			<!-- answer text -->
+			<div class="question-part-text-answer ml3 answer" id="Q3bA">
+			</div>
+			<!-- end answer text -->
+		</div>
+		<!-- end container for question and answer -->
+	</div>
+	<!-- End part letter and text -->
+	
+		<!--Question part letter and text -->
+	<div class="question-part-container mb4 minw5">
+		<div class="question-part-letter" onclick="showAnswer(Q3cA)">
+			c)
+		</div>
+		<!-- container for question and answer -->
+		<div>
+			<!-- question text-->
+			<div class="question-part-text ml4" id="Q3c">
+			</div>
+			<!-- end question text -->
+			<!-- answer text -->
+			<div class="question-part-text-answer ml3 answer" id="Q3cA">
+			</div>
+			<!-- end answer text -->
+		</div>
+		<!-- end container for question and answer -->
+	</div>
+	<!-- End part letter and text -->
+
+			<!--Question part letter and text -->
+	<div class="question-part-container mb4 minw5">
+		<div class="question-part-letter" onclick="showAnswer(Q3dA)">
+			d)
+		</div>
+		<!-- container for question and answer -->
+		<div>
+			<!-- question text-->
+			<div class="question-part-text ml4" id="Q3d">
+			</div>
+			<!-- end question text -->
+			<!-- answer text -->
+			<div class="question-part-text-answer ml3 answer" id="Q3dA">
+			</div>
+			<!-- end answer text -->
+		</div>
+		<!-- end container for question and answer -->
+	</div>
+	<!-- End part letter and text -->
+	
+<!--Large question part container ends here -->
+	</div>
+<!--Large question part container ends here -->
+<!--Question number and text -->
+<div class="question-container ml5 mr5 mb3">
+	<div class="question-number">
+
+	</div>
+	<div class="question-text">
+	<b>Checkpoint:</b> Factorise the quadratic below correctly.
+	</div>
+</div>
+
+<!-- End question number and text -->
+<!--Question parts begin here the large question part container is the parent and each item is called question part container -->
+<div class="large-question-part-container ml6 mr5">
+	<!--Question part letter and text -->
+	<div class="question-part-container mb4 minw6">
+		<div class="question-part-letter">
+
+		</div>
+		<div class="question-part-text ml3">
+		\(x^2-25x+156\)	<div><br>\(\text{Answer:}\) <input type="text" id="AnswerInput3"><br><br></div><button onclick="CheckAnswer3()">Check Answer</button>
+		<div><br></div>
+		<div id="DisplayAnswerMarkingThree"></div>
+		</div>
+	</div>
+
+	
+	</div>
+<!--Large question part container ends here -->
+
+
+</div>
+<!--End Hidden Question three -->
+
+<!--Hidden Question Four -->
+<div   id="HideShow3">
+
+<!--Question number and text -->
+<div class="question-container ml5 mr5 mb3">
+	<div class="question-number">
+		4)
+	</div>
+	<div class="question-text">
+	Factorise the expressions below by finding a pair of numbers that multiply to the last term and add to the middle term.
+	</div>
+</div>
+<!-- End question number and text -->
+
+
+<!--Question parts begin here the large question part container is the parent and each item is called question part container -->
+<div class="large-question-part-container ml6 mr5">
+	<!--Question part letter and text -->
+	<div class="question-part-container mb4 minw5">
+		<!-- container for question lettering -->
+		<div class="question-part-letter"  onclick="showAnswer(Q4aA)">
+			a)
+		</div>
+		<!-- end container for question lettering -->
+		<!-- container for question and answer -->
+		<div>
+			<!-- question text-->
+			<div class="question-part-text ml4" id="Q4a">
+			</div>
+			<!-- end question text -->
+			
+			<!-- answer text -->
+			<div class="question-part-text-answer ml3 answer" id="Q4aA">
+			</div>
+			<!-- end answer text -->
+		</div>
+		<!-- end container for question and answer -->
+	</div>
+	<!-- End part letter and text -->
+	
+	<!--Question part letter and text -->
+	<div class="question-part-container mb4 minw5">
+		<div class="question-part-letter" onclick="showAnswer(Q4bA)">
+			b)
+		</div>
+		<!-- container for question and answer -->
+		<div>
+			<!-- question text-->
+			<div class="question-part-text ml4" id="Q4b">
+			</div>
+			<!-- end question text -->
+			<!-- answer text -->
+			<div class="question-part-text-answer ml3 answer" id="Q4bA">
+			</div>
+			<!-- end answer text -->
+		</div>
+		<!-- end container for question and answer -->
+	</div>
+	<!-- End part letter and text -->
+	
+		<!--Question part letter and text -->
+	<div class="question-part-container mb4 minw5">
+		<div class="question-part-letter" onclick="showAnswer(Q4cA)">
+			c)
+		</div>
+		<!-- container for question and answer -->
+		<div>
+			<!-- question text-->
+			<div class="question-part-text ml4" id="Q4c">
+			</div>
+			<!-- end question text -->
+			<!-- answer text -->
+			<div class="question-part-text-answer ml3 answer" id="Q4cA">
+			</div>
+			<!-- end answer text -->
+		</div>
+		<!-- end container for question and answer -->
+	</div>
+	<!-- End part letter and text -->
+
+			<!--Question part letter and text -->
+	<div class="question-part-container mb4 minw5">
+		<div class="question-part-letter" onclick="showAnswer(Q4dA)">
+			d)
+		</div>
+		<!-- container for question and answer -->
+		<div>
+			<!-- question text-->
+			<div class="question-part-text ml4" id="Q4d">
+			</div>
+			<!-- end question text -->
+			<!-- answer text -->
+			<div class="question-part-text-answer ml3 answer" id="Q4dA">
+			</div>
+			<!-- end answer text -->
+		</div>
+		<!-- end container for question and answer -->
+	</div>
+	<!-- End part letter and text -->
+	
+<!--Large question part container ends here -->
+	</div>
+<!--Large question part container ends here -->
+
+
+
+</div>
+<!--End Hidden Question three -->
+
+<!-- End question number and text -->
+ <script type="text/javascript" src="Quadratic.js"></script>
+<!-- Begin Footer -->
+<p class="Footer">Copyright &#169 Maths Pathway <script>document.write(new Date().getFullYear())</script>. Reproduction for classroom use permitted.</p>
+<!-- End Footer -->
+</body>
+</html>
